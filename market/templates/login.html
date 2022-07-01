@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}
+    Login Page
+{% endblock %}
+
+{% block content %}
+<body class="text-center">
+    <div class="container">
+        <form method="POST" class="form-signin" style="color:white">
+            {{ form.hidden_tag() }}
+            <img class="mb-4" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOoAAACiCAMAAAB4QaF9AAAAilBMVEUAAAD///8HBwf4+PgyMjLT09MsLCzKysoJCQny8vJHR0fa2tr19fXBwcEZGRl2dnYeHh4+Pj4nJyefn5/m5ubk5ORgYGATExOXl5fs7OyOjo4RERFWVlapqanFxcUjIyNDQ0NoaGh+fn5QUFCysrKQkJCGhoY3NzdwcHC6urqkpKRcXFyBgYGwsLAaGifjAAAL/0lEQVR4nO1c63qqOhAVEAHxjgoIXvCGl933f71DJpOQQNi11K2lh/WjX0XArGQys2YS6HRatGjRokWLFi1atGjRokWLFi1atGjR4m2Y7e5Jcp9O3t2Ofwy7f7IcDRBuVtN3N+cfom9pEq67d7foH8H3tBJO+rtb9S8wdRm/0HVDPrCzd7fr+dghu2GSTqJoku7RmBdp1EvT7vb3DG83LM1OnLmhOyB/zVs8elvrngnfJKyMsXRQD+SJuzj/hggEHinsywcPm6KXCs/2e9r3PMyIjRoy063CIWvapukDC5YqWa+9Z07YvV3iOFkNB/Sj1WyuI6KQLMHH6kv0v4bXj/BYb0+jkdng8LNNhoRCkh/ZsUk6lLRhtKJco+IdGoLpjVpq6LMjo5OBHjcpBtMLHF+9uInPQW/N/M0aj/j7BfO2iji6JL3g9F7axudg6XDXik7pzuRhoHY/Y/Ld7YVNfBL+CFEklo5YeeDR061wiU60htE4z5Sg74FQA9wiOm8X41wp9IeyKcNF+5e39XuIwfss4s6UUx2R4OmcuYfqpOCctXnO3V4UAlMDMIERHGZTsp9TzebuR26do9WA2bd5YAeJDQy2ihv+XIDvNYlpSlQH3B3ZCfhidMiah12w5Gc3BQcwTGi+TJUN2N2k/slPkKxDnXJqyHrj5wMG9Q7/qqj2rhBb92RScjueE02xHWgFvfzDEc2zBm/o/2Wq0R8HhpGNcMqV4q4zIVQv72l1LRzyWFqial+ojgiX/HSu/7UgIQa8VN70Z+JE7BEjiETVGdFCy6CoJMa8tJZh94Ym1wWZilf8Xx5VmKSD8+wMolHQh1vPYEydBpWZQN95+EGOq0T4fXSzD90jWPE4z9l4SfyquOVPBWieE34oUt2wLHUHWsnNczk9hgikWQ1KWW3igFneKVMVs1Q9mYPfzTP06Eb1xEtb+y3obpUBG13pxAO1aKEsSksRDZJL1W5JzlPTjCdM2RW32T2YcHMEPwk2CzHYgI2KwpAiy3rMGLyRGbNjx1xoNQFLITruyP9nkIBKqh17DO7qiII/hfn7ytZ+CxPS+CP934Zh2hyqqGadMDsRAWGiGZDzC3P6JwPoYRKqX0AJHbt2FdUskSdnYP0MfFVzFP8dQiarN8wg0RmcqqkSqzWQKuQK605ToEOycuSOtI/Jy0DWfCmjOhWogv9ukA/ugatZ8xiiLyGfMWLprIuSaiAkC01AQjWeoIT2kM7c8uLSlmgjBdUzkfwNEoe0EKEZq9xkZYXv09U4BVWimMIGjWqHlRbmf/IBSiGHcy92pn+xpqSguuaHm4EJr3xqLi99MobDJXSEuzIUVEFBNymRA5HESgvrfMlptGIrOcbJ76pGtUtkcZPW40hkHeywjqQ5q1znx5Sr1xXiqkh11bDcBhZLszwmOmMdha9W0NW4DXBRUYUE3m2SVyLBBtbUqCsigWfHP4WYoKuownJdo1aoQNWm8C/btmN4fVgyD7k1K9TSgbizRYMKaZiLYdqpX9jSDIiIXAcfSlT74LgbtZJBF1O5Hx3xrWemIA1JbUmmegemZpNmaofmca60aExsd5/rid21ICG2kzP0Rpi+vrXfAvFL0upLf2gKIad3pKNM6w0kChtD3A3TuP3fsKY2l/xLPsb+me1spwE0zqfyvGljmgFquuoUO2Y7XVieM+ZMreaUWnLMwB4VCq+PtqtduamyIyQTaCKgbqgFhcZv2b4twRdD2U0bbJImZakS6EbYjehmIra6OBB8MVVIpyZuQ2OwqSY0bjFVDVGK+0O1QSBOSTD1eWNHFGB/oLE61jrwrvypjKvke3QIuX/e1cgnQT/zBeIcxT2jsEwzb5TsVeJgFpmeCpZKA02T9j9Uwe5/OBLVD2m7JN3XowXvat6TMVt6G9N1rTXdU+isONktbuJv0kL5p7Ajmy1VZWSP48N02h9fMfI0/kkMBfRT2Utls7eZEukzcPnLMW9WIv4FROe5RFS1if/16B0u5yAITvvl1P/87IcxioPNwjEMZ7EJ7o8R1SmqvynhKw2ajK28QK8tbs9NmP1Ztzt7uP9Glgko7/KZmmp84VkH/xwW59T1fWXoBJswKNlAX+XmSPR6+N7TksYheNuTiKyUXC4lVlHdPHrrsUK5wg3es6u+a1Qy+C7VfcX1WTr9llh/5r9f2vnyTQPOL3dvSX86jc8b7qCOT+fxOWy6twB+/1z4Lh0iUGe7+PExTe2zIG/GXJn2eMn6DZvN6U7EGyyHLKrcxbBO81ZIaijFggSPhq+P+LRus6PtOlSchFS/tN9pglHGLUxL9kDbyxfJYBVdm2OtuCpg1qGKPskoSQb0+AtFvqX3dodDv1chUfxuP/s2/Ys5+Gl2xrTCvVPX4XX88G9WVYOqjhG1LEyYy8ea5v7med6N3Nofm+C2DPNUrlfbyyPO/fl1KUwJ/QzXk7k1XdOFunBYenqXgNpvH2voWqw4pR7VGRLaVd6N7lTHLsmc+l1YUTRWBbcRS1rEzSWATa8aZnmdEMSv5ZGlg0ls6V4xBnWpLrFRCk+Hqw00ZOkWNlV8TDXDRhzY0VorwGMDSyOIdmTZOmJRmjcJHCfBw4eUqMKCa1DFcK1aa9nRr8JIoHq8F8ks8tKRXXrLRdZRvkR1fS5eXhQplAPob2rB6vS2BlUMoKrNNDMqJOjuT6TqzrUirsV7adbpkpyxLawTkapZuv4k/2gPzJvWw++F+3+TKu05ZUjx8TmZrkAVuB+T3XR541OWhT4a+vkejx1O275IFa63rleLJ1IFkUADwgdtAJxkKBc8alBdV18SqakOcXb6THvgpjmbUpvzlo1MYVRyqiew+O2eeSfJxeJpKILoOBTF4cuobvJRYO9l2cEnXB4WX35Bj3QlqvyXLnhAmjspHXfxQV71pqZXUBVcZrQQG0uJh6LisPJ7M6r5zGMRXcooqNdnTy306BmqGsELqEpOAsMRtIzqOfl76m4/RKrL0tXS614s0X7ZR1Xa8gKqkutHQQVbtHHrqBTxEzgEcxmpignoVMu/RlCTz3f8UyflKkTVC6jKr5yhfhSeykTaUuyg0QJ8LFIVn1ugcUWiGkj2y6aupijp/XuqsucX24+tMgMBw3zQ2amCYihTpfpISEKrLbg+VVVcrUVVgcepLkvnUAsOy2XVGlQxYKhiF84++o6Vl1Cl+lh0yXhOeTW2BlXUAar8IaU/Q5+P/gbV8FGqqERNL8dtUGJfmyoGclXFLdGEpjxK1XBKcB+lWl25LIvDGlTR46veBIS2TfU6oyol45iEQvuR6m1Wwlbslb9RZRmCAiVfUoNqNK+6xkdFfhGpysoFEwKHeA1VsBF75XOqE3ljgYTSwyl1aks4duWN1piDox5lVKXuxQqyK0iIqrLXA1SZKFaiuOmyDlW04FIbp5h5YL7JqErdixkgiEEUhlVl9geo0l8YWDJMRRfXpMrXguSrtiwTmcpUxWel0UXjbitPNAJEwqPE51RxshflAsqKYhfWopqyVYtTLtp0vq7PohCnOueztYfnoKtCa/4Qbp2Z5PXwKFXcNlFKYzypywtUv7j4wH18GExH2e9GvYTn4bwKnKfmxgq6ZJSw2gmrS+Gveyy9xD2j3mNU0T+Wk9ODONqjJQK7eX2nHx9cCxarX3PTslyhesnXEYSCixZeg+DK6y08/rDZbd63tu6nbHE6eIxqLJ4tArNi2unfXUoeKSp9tGF5yoZUHat0Ul5F4Hu3Q9PkPWH6j1HFnZiK4UELjv9G9eGlZHulvN4U5gejmha5BoJL/lO+B9uN9RlVjFWqlTekd3wKVeE9kjkMT8wnmFra9qQzB7ILXBZ3VHhsrn9GFUvvqno0ajIQdE+g2vEvlrRLYOHJQTvXwKOA83GuxaR5chKWOZxNXg1Eqo5IdSBQxRCtrG9jfXn8JKrkp+PT1XQXrmmtL6WNS6Lcn9yDoWUNvbvqFZr+9LLeWNbmeorlLaNdgFhIokdm4tfKlWM/JV/BKzyjrho1XuapR76v/DllZvM70VL9jWip/ka0VH8jmNz/P1AdDhzHGYT/A6qdSQ/Kfw1610qLFi1atGjRokWLFi1atGjRokWLFi1aMPwHC6m1EnOAL8cAAAAASUVORK5CYII=" alt="">
+            <h1 class="h3 mb-3 font-weight-normal">
+                Please Login
+            </h1>
+            <br>
+            {{ form.username.label() }}
+            {{ form.username(class="form-control", placeholder="User Name") }}
+
+            {{ form.password.label() }}
+            {{ form.password(class="form-control", placeholder="Password") }}
+
+            <br>
+
+
+            <div class="checkbox mb-3">
+               <h6>Do not have an account?</h6>
+               <a class="btn btn-sm btn-secondary" href="{{ url_for('register_page') }}">Register</a>
+            </div>
+
+            {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+
+        </form>
+    </div>
+</body>
+{% endblock %}
